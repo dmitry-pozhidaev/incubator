@@ -10466,10 +10466,30 @@ Source: www.kingbright.com</description>
 <part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+12V" device=""/>
 <part name="LOGOUT" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2"/>
 <part name="GND13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="220В" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
+<text x="193.04" y="55.88" size="1.778" layer="91">Лампочка 30...50 Ватт
+220В</text>
+<text x="193.04" y="22.86" size="1.778" layer="91">Электромотор яйцевращательного 
+привода 220В</text>
+<text x="175.26" y="99.06" size="1.778" layer="91">Датчик DS1820</text>
+<text x="66.04" y="12.7" size="1.778" layer="91">Вентилятор от компьютерного 
+блока питания на 12В</text>
+<text x="-17.78" y="55.88" size="1.778" layer="91">Отладка по RS232-TX
+Низковольтная!</text>
+<text x="-15.24" y="86.36" size="1.778" layer="91">Нестабилизированный 
+источник питания 
+постоянного тока
+(трансформатор + 
+диодный мост)
+примерно 14В</text>
+<text x="63.5" y="93.98" size="1.778" layer="91">Отладочный стык SWD</text>
+<text x="193.04" y="-20.32" size="1.778" layer="91">220В
+Подключать через 
+предохранитель на 2А</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="43.18" y="68.58" smashed="yes">
@@ -10572,9 +10592,9 @@ Source: www.kingbright.com</description>
 <attribute name="VALUE" x="166.37" y="91.44" size="1.778" layer="96"/>
 </instance>
 <instance part="GND8" gate="1" x="162.56" y="91.44" smashed="yes"/>
-<instance part="NAGREV" gate="G$1" x="187.96" y="55.88" smashed="yes">
-<attribute name="NAME" x="181.61" y="61.595" size="1.778" layer="95"/>
-<attribute name="VALUE" x="181.61" y="50.8" size="1.778" layer="96"/>
+<instance part="NAGREV" gate="G$1" x="190.5" y="55.88" smashed="yes">
+<attribute name="NAME" x="184.15" y="61.595" size="1.778" layer="95"/>
+<attribute name="VALUE" x="184.15" y="50.8" size="1.778" layer="96"/>
 </instance>
 <instance part="U3" gate="G$1" x="129.54" y="17.78" smashed="yes">
 <attribute name="NAME" x="128.51295" y="31.0064" size="1.78058125" layer="95"/>
@@ -10590,16 +10610,16 @@ Source: www.kingbright.com</description>
 <attribute name="VALUE" x="163.83" y="10.16" size="1.778" layer="96"/>
 </instance>
 <instance part="R10" gate="G$1" x="152.4" y="25.4" smashed="yes" rot="R180">
-<attribute name="NAME" x="148.59" y="26.6446" size="1.778" layer="95"/>
-<attribute name="VALUE" x="153.416" y="26.67" size="1.778" layer="96"/>
+<attribute name="NAME" x="147.32" y="26.6446" size="1.778" layer="95"/>
+<attribute name="VALUE" x="154.178" y="26.67" size="1.778" layer="96"/>
 </instance>
 <instance part="R11" gate="G$1" x="152.4" y="2.54" smashed="yes" rot="R180">
-<attribute name="NAME" x="148.59" y="3.7846" size="1.778" layer="95"/>
+<attribute name="NAME" x="147.828" y="3.7846" size="1.778" layer="95"/>
 <attribute name="VALUE" x="153.416" y="3.81" size="1.778" layer="96"/>
 </instance>
-<instance part="YAICA" gate="G$1" x="187.96" y="22.86" smashed="yes">
-<attribute name="NAME" x="181.61" y="28.575" size="1.778" layer="95"/>
-<attribute name="VALUE" x="181.61" y="17.78" size="1.778" layer="96"/>
+<instance part="YAICA" gate="G$1" x="190.5" y="22.86" smashed="yes">
+<attribute name="NAME" x="184.15" y="28.575" size="1.778" layer="95"/>
+<attribute name="VALUE" x="184.15" y="17.78" size="1.778" layer="96"/>
 </instance>
 <instance part="U$4" gate="G$1" x="53.34" y="7.62" smashed="yes" rot="MR180">
 <attribute name="NAME" x="58.42" y="5.08" size="1.778" layer="95" rot="MR180"/>
@@ -10642,6 +10662,10 @@ Source: www.kingbright.com</description>
 <attribute name="VALUE" x="-8.89" y="76.2" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="GND13" gate="1" x="-5.08" y="60.96" smashed="yes"/>
+<instance part="220В" gate="G$1" x="190.5" y="-17.78" smashed="yes">
+<attribute name="NAME" x="184.15" y="-12.065" size="1.778" layer="95"/>
+<attribute name="VALUE" x="184.15" y="-22.86" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -10967,22 +10991,9 @@ Source: www.kingbright.com</description>
 <wire x1="157.48" y1="58.42" x2="160.02" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="Q1" gate="G$1" pin="A2"/>
 <wire x1="160.02" y1="58.42" x2="160.02" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="160.02" y1="58.42" x2="185.42" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="58.42" x2="187.96" y2="58.42" width="0.1524" layer="91"/>
 <junction x="160.02" y="58.42"/>
 <pinref part="NAGREV" gate="G$1" pin="1"/>
-</segment>
-</net>
-<net name="N$6" class="0">
-<segment>
-<pinref part="R6" gate="G$1" pin="1"/>
-<wire x1="157.48" y1="35.56" x2="160.02" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="Q1" gate="G$1" pin="A1"/>
-<wire x1="160.02" y1="35.56" x2="160.02" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="160.02" y1="35.56" x2="177.8" y2="35.56" width="0.1524" layer="91"/>
-<junction x="160.02" y="35.56"/>
-<pinref part="NAGREV" gate="G$1" pin="2"/>
-<wire x1="185.42" y1="55.88" x2="177.8" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="177.8" y1="55.88" x2="177.8" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$9" class="0">
@@ -11030,7 +11041,7 @@ Source: www.kingbright.com</description>
 <wire x1="157.48" y1="25.4" x2="160.02" y2="25.4" width="0.1524" layer="91"/>
 <pinref part="Q2" gate="G$1" pin="A2"/>
 <wire x1="160.02" y1="25.4" x2="160.02" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="160.02" y1="25.4" x2="185.42" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="25.4" x2="187.96" y2="25.4" width="0.1524" layer="91"/>
 <junction x="160.02" y="25.4"/>
 <pinref part="YAICA" gate="G$1" pin="1"/>
 </segment>
@@ -11041,11 +11052,18 @@ Source: www.kingbright.com</description>
 <wire x1="157.48" y1="2.54" x2="160.02" y2="2.54" width="0.1524" layer="91"/>
 <pinref part="Q2" gate="G$1" pin="A1"/>
 <wire x1="160.02" y1="2.54" x2="160.02" y2="7.62" width="0.1524" layer="91"/>
+<pinref part="R6" gate="G$1" pin="1"/>
+<wire x1="157.48" y1="35.56" x2="160.02" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="Q1" gate="G$1" pin="A1"/>
+<wire x1="160.02" y1="35.56" x2="160.02" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="177.8" y1="2.54" x2="177.8" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="177.8" y1="35.56" x2="160.02" y2="35.56" width="0.1524" layer="91"/>
+<junction x="160.02" y="35.56"/>
 <wire x1="160.02" y1="2.54" x2="177.8" y2="2.54" width="0.1524" layer="91"/>
 <junction x="160.02" y="2.54"/>
-<pinref part="YAICA" gate="G$1" pin="2"/>
-<wire x1="185.42" y1="22.86" x2="177.8" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="177.8" y1="22.86" x2="177.8" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="2.54" x2="160.02" y2="-17.78" width="0.1524" layer="91"/>
+<pinref part="220В" gate="G$1" pin="2"/>
+<wire x1="160.02" y1="-17.78" x2="187.96" y2="-17.78" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$14" class="0">
@@ -11095,12 +11113,30 @@ Source: www.kingbright.com</description>
 <pinref part="P+2" gate="1" pin="+12V"/>
 </segment>
 </net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="220В" gate="G$1" pin="1"/>
+<wire x1="187.96" y1="-15.24" x2="180.34" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="-15.24" x2="180.34" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="NAGREV" gate="G$1" pin="2"/>
+<wire x1="180.34" y1="22.86" x2="180.34" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="55.88" x2="187.96" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="YAICA" gate="G$1" pin="2"/>
+<wire x1="187.96" y1="22.86" x2="180.34" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="22.86" x2="180.34" y2="20.32" width="0.1524" layer="91"/>
+<junction x="180.34" y="22.86"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
 </schematic>
 </drawing>
 <compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
 <note version="8.2" severity="warning">
 Since Version 8.2, EAGLE supports online libraries. The ids
 of those online libraries will not be understood (or retained)
