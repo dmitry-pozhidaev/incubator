@@ -10452,7 +10452,7 @@ Source: www.kingbright.com</description>
 <part name="R10" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="200"/>
 <part name="R11" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="500K"/>
 <part name="YAICA" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2"/>
-<part name="U$4" library="2n7002" deviceset="2N7002" device="SO23" package3d_urn="urn:adsk.eagle:package:28738/2"/>
+<part name="U$4" library="2n7002" deviceset="2N7002" device="SO23" package3d_urn="urn:adsk.eagle:package:28738/2" value="IRLML0060"/>
 <part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R12" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="200"/>
 <part name="R13" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="200"/>
@@ -10467,6 +10467,12 @@ Source: www.kingbright.com</description>
 <part name="LOGOUT" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2"/>
 <part name="GND13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="220В" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2"/>
+<part name="U$5" library="2n7002" deviceset="2N7002" device="SO23" package3d_urn="urn:adsk.eagle:package:28738/2" value="IRLML0060"/>
+<part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="R14" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="200"/>
+<part name="YAICA12" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2"/>
+<part name="CR2" library="BAS32L_115" deviceset="BAS32L,115" device=""/>
+<part name="P+3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+12V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10490,6 +10496,9 @@ Source: www.kingbright.com</description>
 <text x="193.04" y="-20.32" size="1.778" layer="91">220В
 Подключать через 
 предохранитель на 2А</text>
+<text x="76.2" y="-12.7" size="1.778" layer="91">Альтернативный мотор 
+вращателя яиц на 
+12В постоянного тока</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="43.18" y="68.58" smashed="yes">
@@ -10666,6 +10675,26 @@ Source: www.kingbright.com</description>
 <attribute name="NAME" x="184.15" y="-12.065" size="1.778" layer="95"/>
 <attribute name="VALUE" x="184.15" y="-22.86" size="1.778" layer="96"/>
 </instance>
+<instance part="U$5" gate="G$1" x="53.34" y="-22.86" smashed="yes" rot="MR180">
+<attribute name="NAME" x="58.42" y="-25.4" size="1.778" layer="95" rot="MR180"/>
+<attribute name="VALUE" x="58.42" y="-22.86" size="1.778" layer="96" rot="MR180"/>
+</instance>
+<instance part="GND14" gate="1" x="55.88" y="-30.48" smashed="yes"/>
+<instance part="R14" gate="G$1" x="43.18" y="-25.4" smashed="yes" rot="R180">
+<attribute name="NAME" x="38.354" y="-24.1554" size="1.778" layer="95"/>
+<attribute name="VALUE" x="45.212" y="-24.13" size="1.778" layer="96"/>
+</instance>
+<instance part="YAICA12" gate="G$1" x="73.66" y="-10.16" smashed="yes">
+<attribute name="NAME" x="67.31" y="-4.445" size="1.778" layer="95"/>
+<attribute name="VALUE" x="67.31" y="-15.24" size="1.778" layer="96"/>
+</instance>
+<instance part="CR2" gate="A" x="40.64" y="-15.24" smashed="yes" rot="R180">
+<attribute name="VALUE" x="33.707040625" y="-19.76891875" size="1.778" layer="96" ratio="10" rot="SR0"/>
+<attribute name="NAME" x="38.07408125" y="-12.542590625" size="1.778" layer="95" ratio="10" rot="SR0"/>
+</instance>
+<instance part="P+3" gate="1" x="27.94" y="-7.62" smashed="yes" rot="R90">
+<attribute name="VALUE" x="23.114" y="-5.334" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -10799,6 +10828,10 @@ Source: www.kingbright.com</description>
 <wire x1="-5.08" y1="63.5" x2="-5.08" y2="68.58" width="0.1524" layer="91"/>
 <pinref part="LOGOUT" gate="G$1" pin="1"/>
 <wire x1="-5.08" y1="68.58" x2="-12.7" y2="68.58" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND14" gate="1" pin="GND"/>
+<pinref part="U$5" gate="G$1" pin="S"/>
 </segment>
 </net>
 <net name="SWCLK" class="0">
@@ -10966,6 +10999,11 @@ Source: www.kingbright.com</description>
 <wire x1="101.6" y1="25.4" x2="88.9" y2="25.4" width="0.1524" layer="91"/>
 <label x="87.376" y="25.908" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="R14" gate="G$1" pin="2"/>
+<wire x1="38.1" y1="-25.4" x2="30.48" y2="-25.4" width="0.1524" layer="91"/>
+<label x="27.94" y="-25.4" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="N$3" class="0">
 <segment>
@@ -11112,6 +11150,16 @@ Source: www.kingbright.com</description>
 <junction x="35.56" y="22.86"/>
 <pinref part="P+2" gate="1" pin="+12V"/>
 </segment>
+<segment>
+<pinref part="YAICA12" gate="G$1" pin="1"/>
+<wire x1="71.12" y1="-7.62" x2="35.56" y2="-7.62" width="0.1524" layer="91"/>
+<pinref part="CR2" gate="A" pin="CATHODE"/>
+<wire x1="35.56" y1="-7.62" x2="30.48" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="-15.24" x2="35.56" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="-15.24" x2="35.56" y2="-7.62" width="0.1524" layer="91"/>
+<junction x="35.56" y="-7.62"/>
+<pinref part="P+3" gate="1" pin="+12V"/>
+</segment>
 </net>
 <net name="N$6" class="0">
 <segment>
@@ -11125,6 +11173,25 @@ Source: www.kingbright.com</description>
 <wire x1="187.96" y1="22.86" x2="180.34" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="180.34" y1="22.86" x2="180.34" y2="20.32" width="0.1524" layer="91"/>
 <junction x="180.34" y="22.86"/>
+</segment>
+</net>
+<net name="N$17" class="0">
+<segment>
+<pinref part="R14" gate="G$1" pin="1"/>
+<pinref part="U$5" gate="G$1" pin="G"/>
+<wire x1="48.26" y1="-25.4" x2="50.8" y2="-25.4" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$18" class="0">
+<segment>
+<pinref part="U$5" gate="G$1" pin="D"/>
+<wire x1="55.88" y1="-17.78" x2="55.88" y2="-15.24" width="0.1524" layer="91"/>
+<pinref part="YAICA12" gate="G$1" pin="2"/>
+<wire x1="55.88" y1="-15.24" x2="55.88" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="-10.16" x2="71.12" y2="-10.16" width="0.1524" layer="91"/>
+<pinref part="CR2" gate="A" pin="ANODE"/>
+<wire x1="43.18" y1="-15.24" x2="55.88" y2="-15.24" width="0.1524" layer="91"/>
+<junction x="55.88" y="-15.24"/>
 </segment>
 </net>
 </nets>
